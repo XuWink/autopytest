@@ -1,0 +1,4 @@
+test_list_all_user_info:
+  # 期望结果，期望返回码，期望返回信息
+  # except_result, except_code, except_msg
+  - [True, 200, "查询成功"]
