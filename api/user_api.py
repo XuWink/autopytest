@@ -7,3 +7,6 @@ class UserApi(RequestHandler):
 
     def list_all_users(self, **kwargs):
         return self.request("GET", "/users", **kwargs)
+    
+    def login(self, **kwargs):
+        return self.request("POST", "/login", **kwargs)
