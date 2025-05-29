@@ -1,7 +1,7 @@
 import os
 import pytest
 import allure
-from api.user_api import UserApi
+from api.user_api import user_api
 from common.logger import logger
 from utils.read_data import FileLoader
 from utils.util import get_base_path
@@ -37,7 +37,7 @@ def login_fixture():
         "password": admin_password
     }
     try:
-        admin_info = UserApi.login(data=payload, headers=headers)
+        admin_info = user_api.login(data=payload, headers=headers)
         step_login(admin_username)
         yield admin_info.json()
     except Exception as e:

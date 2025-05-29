@@ -2,12 +2,13 @@ import requests
 from api.user_api import UserApi
 from common.logger import logger
 from core.response_base import ResultBase
+from api.user_api import user_api
 
 def list_all_user_info() -> ResultBase:
     """获取所有用户信息"""
     result = ResultBase()
     try:
-        resp = UserApi.list_all_users()
+        resp = user_api.list_all_users()
         result.response = resp
         
         if not resp.ok:
